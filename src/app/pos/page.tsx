@@ -211,14 +211,14 @@ export default function POSTerminal() {
                       <div className="flex items-center space-x-2">
                         <button
                           onClick={() => updateQuantity(index, item.quantity - 1)}
-                          className="w-6 h-6 rounded-full bg-gray-600 flex items-center justify-center hover:bg-gray-500"
+                          className="w-6 h-6 rounded-full bg-gray-600 text-white flex items-center justify-center hover:bg-gray-500"
                         >
                           <Minus className="h-3 w-3" />
                         </button>
                         <span className="w-8 text-center text-sm">{item.quantity}</span>
                         <button
                           onClick={() => updateQuantity(index, item.quantity + 1)}
-                          className="w-6 h-6 rounded-full bg-gray-600 flex items-center justify-center hover:bg-gray-500"
+                          className="w-6 h-6 rounded-full bg-gray-600 text-white flex items-center justify-center hover:bg-gray-500"
                         >
                           <Plus className="h-3 w-3" />
                         </button>
@@ -262,7 +262,7 @@ export default function POSTerminal() {
                     className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                       paymentMethod === 'CARD'
                         ? 'bg-blue-600 text-white'
-                        : 'bg-gray-700 text-gray-200 border border-gray-600'
+                        : 'bg-gray-700 text-white border border-gray-600'
                     }`}
                   >
                     <CreditCard className="h-4 w-4 inline mr-1" />
@@ -273,7 +273,7 @@ export default function POSTerminal() {
                     className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                       paymentMethod === 'CASH'
                         ? 'bg-blue-600 text-white'
-                        : 'bg-gray-700 text-gray-200 border border-gray-600'
+                        : 'bg-gray-700 text-white border border-gray-600'
                     }`}
                   >
                     Cash
