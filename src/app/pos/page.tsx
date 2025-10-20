@@ -12,7 +12,8 @@ import {
   Receipt,
   Users,
   ChefHat,
-  ArrowLeft
+  ArrowLeft,
+  ExternalLink
 } from 'lucide-react';
 
 // Mock menu data
@@ -128,13 +129,25 @@ export default function POSTerminal() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">
+              <Link href="/about" className="text-gray-300 hover:text-white text-sm">
+                About System
+              </Link>
+              <Badge variant="outline" className="bg-blue-900 text-blue-300 border-blue-700">
                 Staff Interface
               </Badge>
-              <div className="text-sm text-gray-200">
+              <div className="text-sm text-gray-300">
                 <Users className="h-4 w-4 inline mr-1" />
                 Active Orders: 3
               </div>
+              <a
+                href="https://bizbot.store"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 bg-orange-600 hover:bg-orange-700 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+              >
+                <ExternalLink className="h-4 w-4" />
+                <span>BizBot</span>
+              </a>
             </div>
           </div>
         </div>

@@ -14,7 +14,8 @@ import {
   Search,
   ArrowLeft,
   TrendingUp,
-  BarChart3
+  BarChart3,
+  ExternalLink
 } from 'lucide-react';
 
 // Mock inventory data
@@ -157,6 +158,9 @@ export default function InventoryManagement() {
             </div>
 
             <div className="flex items-center space-x-4">
+              <Link href="/about" className="text-gray-300 hover:text-white text-sm">
+                About System
+              </Link>
               <Badge variant="outline" className="bg-yellow-900 text-yellow-300 border-yellow-700">
                 {lowStockItems} Low Stock Items
               </Badge>
@@ -164,6 +168,15 @@ export default function InventoryManagement() {
                 <BarChart3 className="h-4 w-4 inline mr-1" />
                 Total Value: ${totalValue.toFixed(2)}
               </div>
+              <a
+                href="https://bizbot.store"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 bg-orange-600 hover:bg-orange-700 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+              >
+                <ExternalLink className="h-4 w-4" />
+                <span>BizBot</span>
+              </a>
             </div>
           </div>
         </div>

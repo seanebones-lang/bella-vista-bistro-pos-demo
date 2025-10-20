@@ -14,7 +14,8 @@ import {
   ArrowLeft,
   Timer,
   Users,
-  TrendingUp
+  TrendingUp,
+  ExternalLink
 } from 'lucide-react';
 
 // Mock order data
@@ -163,6 +164,9 @@ export default function KitchenDisplay() {
             </div>
 
             <div className="flex items-center space-x-6">
+              <Link href="/about" className="text-gray-300 hover:text-white text-sm">
+                About System
+              </Link>
               <div className="text-center">
                 <div className="text-2xl font-bold text-yellow-400">{pendingOrders}</div>
                 <div className="text-xs text-gray-400">PENDING</div>
@@ -178,6 +182,15 @@ export default function KitchenDisplay() {
               <div className="text-sm text-gray-400">
                 {currentTime.toLocaleTimeString()}
               </div>
+              <a
+                href="https://bizbot.store"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 bg-orange-600 hover:bg-orange-700 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+              >
+                <ExternalLink className="h-4 w-4" />
+                <span>BizBot</span>
+              </a>
             </div>
           </div>
         </div>

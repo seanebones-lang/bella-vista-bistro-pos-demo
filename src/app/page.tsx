@@ -12,7 +12,8 @@ import {
   Smartphone,
   Clock,
   Shield,
-  Zap
+  Zap,
+  ExternalLink
 } from 'lucide-react';
 
 export default function Home() {
@@ -29,9 +30,23 @@ export default function Home() {
                 <p className="text-sm text-gray-200">Complete Restaurant POS System Demo</p>
               </div>
             </div>
-            <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">
-              Live Demo
-            </Badge>
+            <div className="flex items-center space-x-4">
+              <Link href="/about" className="text-gray-300 hover:text-white text-sm">
+                About System
+              </Link>
+              <Badge variant="outline" className="bg-green-900 text-green-300 border-green-700">
+                Live Demo
+              </Badge>
+              <a
+                href="https://bizbot.store"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 bg-orange-600 hover:bg-orange-700 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+              >
+                <ExternalLink className="h-4 w-4" />
+                <span>BizBot</span>
+              </a>
+            </div>
           </div>
         </div>
       </header>

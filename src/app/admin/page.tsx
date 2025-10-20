@@ -15,7 +15,8 @@ import {
   Trash2,
   Plus,
   Save,
-  X
+  X,
+  ExternalLink
 } from 'lucide-react';
 
 // Mock data
@@ -71,9 +72,23 @@ export default function AdminDashboard() {
               </div>
             </div>
 
-            <Badge variant="outline" className="bg-blue-900 text-blue-300 border-blue-700">
-              Admin Panel
-            </Badge>
+            <div className="flex items-center space-x-4">
+              <Link href="/about" className="text-gray-300 hover:text-white text-sm">
+                About System
+              </Link>
+              <Badge variant="outline" className="bg-blue-900 text-blue-300 border-blue-700">
+                Admin Panel
+              </Badge>
+              <a
+                href="https://bizbot.store"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 bg-orange-600 hover:bg-orange-700 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+              >
+                <ExternalLink className="h-4 w-4" />
+                <span>BizBot</span>
+              </a>
+            </div>
           </div>
         </div>
       </header>

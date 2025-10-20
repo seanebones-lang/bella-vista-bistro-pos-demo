@@ -17,7 +17,8 @@ import {
   Truck,
   CreditCard,
   ArrowLeft,
-  CheckCircle
+  CheckCircle,
+  ExternalLink
 } from 'lucide-react';
 
 // Mock menu data
@@ -153,28 +154,40 @@ export default function OnlineOrdering() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+      <header className="bg-gray-800 shadow-sm border-b border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <Link href="/" className="flex items-center space-x-2 text-gray-200 hover:text-white">
+              <Link href="/" className="flex items-center space-x-2 text-gray-300 hover:text-white">
                 <ArrowLeft className="h-4 w-4" />
                 <span>Back to Demo</span>
               </Link>
               <div className="flex items-center">
-                <ChefHat className="h-6 w-6 text-orange-600 mr-2" />
+                <ChefHat className="h-6 w-6 text-orange-500 mr-2" />
                 <h1 className="text-2xl font-bold text-white">Bella Vista Bistro</h1>
               </div>
             </div>
 
             <div className="flex items-center space-x-4">
-              <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
+              <Link href="/about" className="text-gray-300 hover:text-white text-sm">
+                About System
+              </Link>
+              <Badge variant="outline" className="bg-green-900 text-green-300 border-green-700">
                 Online Ordering
               </Badge>
-              <div className="flex items-center text-sm text-gray-600">
+              <div className="flex items-center text-sm text-gray-300">
                 <Clock className="h-4 w-4 mr-1" />
                 Open until 10 PM
               </div>
+              <a
+                href="https://bizbot.store"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 bg-orange-600 hover:bg-orange-700 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+              >
+                <ExternalLink className="h-4 w-4" />
+                <span>BizBot</span>
+              </a>
             </div>
           </div>
         </div>
