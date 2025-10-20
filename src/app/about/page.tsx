@@ -1,5 +1,12 @@
 'use client';
 
+// LEGAL NOTICE - PROPRIETARY SOFTWARE DEMONSTRATION
+// This is a demonstration version of proprietary software owned by Sean McDonnell (2025).
+// This demo is provided for evaluation purposes only. A valid license must be obtained
+// prior to any production use, testing, or deployment. No part of this system or its
+// code may be used, copied, modified, or distributed without explicit written permission
+// from the owner.
+
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -71,6 +78,36 @@ export default function About() {
       </header>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Legal Notice Section */}
+        <div className="mb-12">
+          <Card className="bg-red-900/20 border-red-700 border-2">
+            <CardHeader>
+              <CardTitle className="text-red-300 flex items-center">
+                <Shield className="h-6 w-6 text-red-400 mr-2" />
+                IMPORTANT LEGAL NOTICE - PROPRIETARY SOFTWARE
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <p className="text-red-200 font-semibold">
+                  This is a demonstration version of proprietary software owned by Sean McDonnell (2025).
+                </p>
+                <p className="text-red-200">
+                  This demo is provided for <strong>evaluation purposes only</strong>. A valid license must be obtained prior to any production use, testing, or deployment.
+                </p>
+                <p className="text-red-200 font-semibold">
+                  No part of this system or its code may be used, copied, modified, or distributed without explicit written permission from the owner.
+                </p>
+                <div className="bg-red-900/30 p-4 rounded-lg border border-red-700">
+                  <p className="text-red-100 text-sm">
+                    <strong>For licensing inquiries:</strong> Contact the system owner for proper licensing and usage permissions.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -993,14 +1030,14 @@ export default function About() {
                   href="https://bizbot.store"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
+                  className="bg-gray-700 text-orange-400 px-8 py-3 rounded-lg font-semibold hover:bg-gray-600 border border-orange-600 transition-colors inline-flex items-center"
                 >
                   <ExternalLink className="h-5 w-5 mr-2" />
                   Get Started with BizBot
                 </a>
                 <Link
                   href="/"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
+                  className="border-2 border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 hover:text-white transition-colors"
                 >
                   Back to Demo
                 </Link>

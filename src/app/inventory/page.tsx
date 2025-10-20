@@ -116,10 +116,10 @@ export default function InventoryManagement() {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'LOW_STOCK': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-      case 'OUT_OF_STOCK': return 'bg-red-100 text-red-800 border-red-200';
-      case 'NORMAL': return 'bg-green-100 text-green-800 border-green-200';
-      default: return 'bg-gray-100 text-gray-800 border-gray-200';
+      case 'LOW_STOCK': return 'bg-yellow-900 text-yellow-300 border-yellow-700';
+      case 'OUT_OF_STOCK': return 'bg-red-900 text-red-300 border-red-700';
+      case 'NORMAL': return 'bg-green-900 text-green-300 border-green-700';
+      default: return 'bg-gray-800 text-gray-200 border-gray-600';
     }
   };
 
@@ -220,7 +220,7 @@ export default function InventoryManagement() {
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                   selectedCategory === category
                     ? 'bg-green-600 text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border'
+                    : 'bg-gray-700 text-white hover:bg-gray-600 border border-gray-600'
                 }`}
               >
                 {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -347,12 +347,12 @@ export default function InventoryManagement() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="p-4 bg-white rounded-lg border border-green-100">
-                  <h4 className="font-medium text-gray-900 mb-2">Reorder Recommendations</h4>
+                <div className="p-4 bg-gray-800 rounded-lg border border-green-700">
+                  <h4 className="font-medium text-white mb-2">Reorder Recommendations</h4>
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
                       <span>Fresh Tomatoes</span>
-                      <Badge className="bg-red-100 text-red-800">Urgent</Badge>
+                      <Badge className="bg-red-900 text-red-300">Urgent</Badge>
                     </div>
                     <div className="flex justify-between">
                       <span>Mozzarella Cheese</span>
@@ -360,25 +360,25 @@ export default function InventoryManagement() {
                     </div>
                     <div className="flex justify-between">
                       <span>Olive Oil</span>
-                      <Badge className="bg-red-100 text-red-800">Urgent</Badge>
+                      <Badge className="bg-red-900 text-red-300">Urgent</Badge>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-4 bg-white rounded-lg border border-blue-100">
-                  <h4 className="font-medium text-gray-900 mb-2">Usage Forecasting</h4>
+                <div className="p-4 bg-gray-800 rounded-lg border border-blue-700">
+                  <h4 className="font-medium text-white mb-2">Usage Forecasting</h4>
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
                       <span>Peak Usage: 6-8 PM</span>
-                      <span className="text-blue-600">+15%</span>
+                      <span className="text-blue-400">+15%</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Weekly Trend</span>
-                      <span className="text-green-600">+8%</span>
+                      <span className="text-green-400">+8%</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Seasonal Adjustment</span>
-                      <span className="text-purple-600">+12%</span>
+                      <span className="text-purple-400">+12%</span>
                     </div>
                   </div>
                 </div>

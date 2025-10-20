@@ -267,13 +267,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/pos"
-              className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-gray-700 text-orange-400 px-8 py-3 rounded-lg font-semibold hover:bg-gray-600 border border-orange-600 transition-colors"
             >
               Try POS Terminal
             </Link>
             <Link
               href="/ordering"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
+              className="border-2 border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 hover:text-white transition-colors"
             >
               Customer Ordering
             </Link>

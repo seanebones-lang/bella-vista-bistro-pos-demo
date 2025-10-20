@@ -107,7 +107,7 @@ export default function AdminDashboard() {
               onClick={() => setActiveTab(tab.id as 'overview' | 'staff' | 'settings' | 'integrations')}
               className={`flex items-center space-x-2 px-4 py-2 rounded-md font-medium transition-colors ${
                 activeTab === tab.id
-                  ? 'bg-white text-blue-600 shadow-sm'
+                  ? 'bg-gray-700 text-blue-400 shadow-sm border border-gray-600'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
@@ -274,7 +274,7 @@ export default function AdminDashboard() {
                       type="text"
                       defaultValue={systemSettings.restaurantName}
                       disabled={!isEditing}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md disabled:bg-gray-50"
+                      className="w-full px-3 py-2 border border-gray-600 rounded-md bg-gray-700 text-white disabled:bg-gray-600"
                     />
                   </div>
                   <div>
@@ -283,7 +283,7 @@ export default function AdminDashboard() {
                       type="text"
                       defaultValue={systemSettings.address}
                       disabled={!isEditing}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md disabled:bg-gray-50"
+                      className="w-full px-3 py-2 border border-gray-600 rounded-md bg-gray-700 text-white disabled:bg-gray-600"
                     />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
@@ -293,7 +293,7 @@ export default function AdminDashboard() {
                         type="text"
                         defaultValue={systemSettings.phone}
                         disabled={!isEditing}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md disabled:bg-gray-50"
+                        className="w-full px-3 py-2 border border-gray-600 rounded-md bg-gray-700 text-white disabled:bg-gray-600"
                       />
                     </div>
                     <div>
@@ -302,7 +302,7 @@ export default function AdminDashboard() {
                         type="email"
                         defaultValue={systemSettings.email}
                         disabled={!isEditing}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md disabled:bg-gray-50"
+                        className="w-full px-3 py-2 border border-gray-600 rounded-md bg-gray-700 text-white disabled:bg-gray-600"
                       />
                     </div>
                   </div>
@@ -321,7 +321,7 @@ export default function AdminDashboard() {
                       type="text"
                       defaultValue={systemSettings.hours}
                       disabled={!isEditing}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md disabled:bg-gray-50"
+                      className="w-full px-3 py-2 border border-gray-600 rounded-md bg-gray-700 text-white disabled:bg-gray-600"
                     />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
@@ -332,7 +332,7 @@ export default function AdminDashboard() {
                         step="0.01"
                         defaultValue={systemSettings.taxRate}
                         disabled={!isEditing}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md disabled:bg-gray-50"
+                        className="w-full px-3 py-2 border border-gray-600 rounded-md bg-gray-700 text-white disabled:bg-gray-600"
                       />
                     </div>
                     <div>
@@ -340,7 +340,7 @@ export default function AdminDashboard() {
                       <select
                         defaultValue={systemSettings.currency}
                         disabled={!isEditing}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md disabled:bg-gray-50"
+                        className="w-full px-3 py-2 border border-gray-600 rounded-md bg-gray-700 text-white disabled:bg-gray-600"
                       >
                         <option value="USD">USD</option>
                         <option value="EUR">EUR</option>
@@ -353,7 +353,7 @@ export default function AdminDashboard() {
                     <select
                       defaultValue={systemSettings.timezone}
                       disabled={!isEditing}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md disabled:bg-gray-50"
+                      className="w-full px-3 py-2 border border-gray-600 rounded-md bg-gray-700 text-white disabled:bg-gray-600"
                     >
                       <option value="America/New_York">Eastern Time</option>
                       <option value="America/Chicago">Central Time</option>

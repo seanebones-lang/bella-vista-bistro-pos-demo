@@ -258,19 +258,19 @@ export default function AnalyticsDashboard() {
             <CardContent>
               <div className="space-y-4">
                 {topItems.map((item, index) => (
-                  <div key={item.name} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                  <div key={item.name} className="flex items-center justify-between p-3 bg-gray-700 rounded-lg border border-gray-600">
                     <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-bold text-sm">
+                      <div className="w-8 h-8 bg-orange-900 rounded-full flex items-center justify-center text-orange-300 font-bold text-sm border border-orange-700">
                         {index + 1}
                       </div>
                       <div>
-                        <div className="font-medium text-gray-900">{item.name}</div>
-                        <div className="text-sm text-gray-600">{item.sales} sold</div>
+                        <div className="font-medium text-white">{item.name}</div>
+                        <div className="text-sm text-gray-300">{item.sales} sold</div>
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="font-bold text-green-600">${item.revenue}</div>
-                      <div className="text-xs text-gray-500">revenue</div>
+                      <div className="font-bold text-green-400">${item.revenue}</div>
+                      <div className="text-xs text-gray-400">revenue</div>
                     </div>
                   </div>
                 ))}
@@ -292,31 +292,31 @@ export default function AnalyticsDashboard() {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="p-4 bg-white rounded-lg border border-blue-100">
-                <h4 className="font-medium text-gray-900 mb-2">Peak Performance Prediction</h4>
-                <p className="text-sm text-gray-600 mb-3">
+              <div className="p-4 bg-gray-800 rounded-lg border border-blue-700">
+                <h4 className="font-medium text-white mb-2">Peak Performance Prediction</h4>
+                <p className="text-sm text-gray-300 mb-3">
                   Based on historical data, Saturday evenings show 35% higher order volume.
                   Consider scheduling additional staff for 6-9 PM on weekends.
                 </p>
-                <Badge className="bg-blue-100 text-blue-800">High Confidence</Badge>
+                <Badge className="bg-blue-900 text-blue-300">High Confidence</Badge>
               </div>
 
-              <div className="p-4 bg-white rounded-lg border border-green-100">
-                <h4 className="font-medium text-gray-900 mb-2">Menu Optimization Suggestion</h4>
-                <p className="text-sm text-gray-600 mb-3">
+              <div className="p-4 bg-gray-800 rounded-lg border border-green-700">
+                <h4 className="font-medium text-white mb-2">Menu Optimization Suggestion</h4>
+                <p className="text-sm text-gray-300 mb-3">
                   Grilled Salmon has 23% higher profit margin than average menu items.
                   Consider featuring it more prominently or increasing its price point.
                 </p>
-                <Badge className="bg-green-100 text-green-800">Actionable</Badge>
+                <Badge className="bg-green-900 text-green-300">Actionable</Badge>
               </div>
 
-              <div className="p-4 bg-white rounded-lg border border-yellow-100">
-                <h4 className="font-medium text-gray-900 mb-2">Inventory Alert</h4>
-                <p className="text-sm text-gray-600 mb-3">
+              <div className="p-4 bg-gray-800 rounded-lg border border-yellow-700">
+                <h4 className="font-medium text-white mb-2">Inventory Alert</h4>
+                <p className="text-sm text-gray-300 mb-3">
                   Current tomato inventory will be depleted in 2 days based on usage patterns.
                   Consider placing an order to avoid stockouts.
                 </p>
-                <Badge className="bg-yellow-100 text-yellow-800">Urgent</Badge>
+                <Badge className="bg-yellow-900 text-yellow-300">Urgent</Badge>
               </div>
             </CardContent>
           </Card>

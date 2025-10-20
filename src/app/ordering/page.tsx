@@ -198,7 +198,7 @@ export default function OnlineOrdering() {
           {/* Menu Section */}
           <div className="lg:col-span-2">
             {/* Restaurant Info */}
-            <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
+            <div className="bg-gray-800 rounded-lg shadow-sm p-6 mb-6 border border-gray-700">
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <h2 className="text-xl font-semibold text-gray-900">Bella Vista Bistro</h2>
@@ -227,7 +227,7 @@ export default function OnlineOrdering() {
             </div>
 
             {/* Order Type Selection */}
-            <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
+            <div className="bg-gray-800 rounded-lg shadow-sm p-6 mb-6 border border-gray-700">
               <h3 className="font-medium mb-4">Order Type</h3>
               <div className="flex space-x-4">
                 <button
@@ -235,7 +235,7 @@ export default function OnlineOrdering() {
                   className={`flex-1 py-3 px-4 rounded-lg font-medium transition-colors ${
                     customerInfo.orderType === 'pickup'
                       ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      : 'bg-gray-700 text-white hover:bg-gray-600'
                   }`}
                 >
                   <Clock className="h-4 w-4 inline mr-2" />
@@ -246,7 +246,7 @@ export default function OnlineOrdering() {
                   className={`flex-1 py-3 px-4 rounded-lg font-medium transition-colors ${
                     customerInfo.orderType === 'delivery'
                       ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      : 'bg-gray-700 text-white hover:bg-gray-600'
                   }`}
                 >
                   <Truck className="h-4 w-4 inline mr-2" />
@@ -266,7 +266,7 @@ export default function OnlineOrdering() {
                     className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                       selectedCategory === category
                         ? 'bg-orange-600 text-white'
-                        : 'bg-white text-gray-700 hover:bg-gray-100 border'
+                        : 'bg-gray-700 text-white hover:bg-gray-600 border border-gray-600'
                     }`}
                   >
                     {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -279,7 +279,7 @@ export default function OnlineOrdering() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredItems.map(item => (
                 <Card key={item.id} className="overflow-hidden hover:shadow-lg transition-all duration-300">
-                  <div className="aspect-w-16 aspect-h-9 bg-gray-200">
+                  <div className="aspect-w-16 aspect-h-9 bg-gray-700">
                     <div className="w-full h-32 bg-gradient-to-br from-orange-200 to-red-200 flex items-center justify-center">
                       <span className="text-4xl">🍕</span>
                     </div>
@@ -312,7 +312,7 @@ export default function OnlineOrdering() {
 
           {/* Cart & Checkout Section */}
           <div className="lg:col-span-1">
-            <div className="bg-white rounded-lg shadow-sm p-6 sticky top-8">
+            <div className="bg-gray-800 rounded-lg shadow-sm p-6 sticky top-8 border border-gray-700">
               <h2 className="text-xl font-semibold mb-4 flex items-center">
                 <ShoppingCart className="h-5 w-5 mr-2" />
                 Your Order
@@ -321,26 +321,26 @@ export default function OnlineOrdering() {
               {/* Cart Items */}
               <div className="space-y-3 mb-6 max-h-64 overflow-y-auto">
                 {cart.length === 0 ? (
-                  <p className="text-gray-500 text-center py-4">Your cart is empty</p>
+                  <p className="text-gray-400 text-center py-4">Your cart is empty</p>
                 ) : (
                   cart.map((item, index) => (
-                    <div key={index} className="flex items-center justify-between p-2 bg-gray-50 rounded">
+                    <div key={index} className="flex items-center justify-between p-2 bg-gray-700 rounded border border-gray-600">
                       <div className="flex-1">
                         <h4 className="font-medium text-sm">{item.menuItem.name}</h4>
-                        <p className="text-xs text-gray-600">${item.menuItem.price.toFixed(2)} each</p>
+                        <p className="text-xs text-gray-300">${item.menuItem.price.toFixed(2)} each</p>
                       </div>
 
                       <div className="flex items-center space-x-2">
                         <button
                           onClick={() => updateQuantity(index, item.quantity - 1)}
-                          className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300"
+                          className="w-6 h-6 rounded-full bg-gray-600 text-white flex items-center justify-center hover:bg-gray-500"
                         >
                           <Minus className="h-3 w-3" />
                         </button>
                         <span className="w-8 text-center text-sm">{item.quantity}</span>
                         <button
                           onClick={() => updateQuantity(index, item.quantity + 1)}
-                          className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300"
+                          className="w-6 h-6 rounded-full bg-gray-600 text-white flex items-center justify-center hover:bg-gray-500"
                         >
                           <Plus className="h-3 w-3" />
                         </button>
@@ -406,7 +406,7 @@ export default function OnlineOrdering() {
                       className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                         paymentMethod === 'CARD'
                           ? 'bg-blue-600 text-white'
-                          : 'bg-gray-200 text-gray-700'
+                          : 'bg-gray-700 text-white'
                       }`}
                     >
                       <CreditCard className="h-4 w-4 inline mr-1" />
@@ -417,7 +417,7 @@ export default function OnlineOrdering() {
                       className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                         paymentMethod === 'CASH'
                           ? 'bg-blue-600 text-white'
-                          : 'bg-gray-200 text-gray-700'
+                          : 'bg-gray-700 text-white'
                       }`}
                     >
                       Cash
@@ -456,7 +456,7 @@ export default function OnlineOrdering() {
                 disabled={cart.length === 0 || isProcessingOrder || !customerInfo.name || !customerInfo.phone || (customerInfo.orderType === 'delivery' && !customerInfo.address)}
                 className={`w-full py-3 rounded-lg font-medium transition-colors ${
                   cart.length === 0 || isProcessingOrder || !customerInfo.name || !customerInfo.phone || (customerInfo.orderType === 'delivery' && !customerInfo.address)
-                    ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                    ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
                     : 'bg-green-600 text-white hover:bg-green-700'
                 }`}
               >
