@@ -140,27 +140,27 @@ export default function InventoryManagement() {
   const totalValue = inventoryItems.reduce((sum, item) => sum + (item.currentStock * item.costPerUnit), 0);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+      <header className="bg-gray-800 shadow-sm border-b border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <Link href="/" className="flex items-center space-x-2 text-gray-600 hover:text-gray-900">
+              <Link href="/" className="flex items-center space-x-2 text-gray-300 hover:text-white">
                 <ArrowLeft className="h-4 w-4" />
                 <span>Back to Demo</span>
               </Link>
               <div className="flex items-center">
-                <Package className="h-6 w-6 text-green-600 mr-2" />
-                <h1 className="text-2xl font-bold text-gray-900">Inventory Management</h1>
+                <Package className="h-6 w-6 text-green-400 mr-2" />
+                <h1 className="text-2xl font-bold text-white">Inventory Management</h1>
               </div>
             </div>
 
             <div className="flex items-center space-x-4">
-              <Badge variant="outline" className="bg-yellow-50 text-yellow-700 border-yellow-200">
+              <Badge variant="outline" className="bg-yellow-900 text-yellow-300 border-yellow-700">
                 {lowStockItems} Low Stock Items
               </Badge>
-              <div className="text-sm text-gray-600">
+              <div className="text-sm text-gray-300">
                 <BarChart3 className="h-4 w-4 inline mr-1" />
                 Total Value: ${totalValue.toFixed(2)}
               </div>

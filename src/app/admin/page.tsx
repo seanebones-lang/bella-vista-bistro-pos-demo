@@ -55,23 +55,23 @@ export default function AdminDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+      <header className="bg-gray-800 shadow-sm border-b border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <Link href="/" className="flex items-center space-x-2 text-gray-600 hover:text-gray-900">
+              <Link href="/" className="flex items-center space-x-2 text-gray-300 hover:text-white">
                 <ArrowLeft className="h-4 w-4" />
                 <span>Back to Demo</span>
               </Link>
               <div className="flex items-center">
-                <Settings className="h-6 w-6 text-blue-600 mr-2" />
-                <h1 className="text-2xl font-bold text-gray-900">System Administration</h1>
+                <Settings className="h-6 w-6 text-blue-400 mr-2" />
+                <h1 className="text-2xl font-bold text-white">System Administration</h1>
               </div>
             </div>
 
-            <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-200">
+            <Badge variant="outline" className="bg-blue-900 text-blue-300 border-blue-700">
               Admin Panel
             </Badge>
           </div>
