@@ -129,7 +129,7 @@ export default function OnlineOrdering() {
 
   if (orderPlaced) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center p-4">
         <Card className="w-full max-w-md">
           <CardContent className="p-8 text-center">
             <CheckCircle className="h-16 w-16 text-green-600 mx-auto mb-4" />
@@ -151,19 +151,19 @@ export default function OnlineOrdering() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <Link href="/" className="flex items-center space-x-2 text-gray-600 hover:text-gray-900">
+              <Link href="/" className="flex items-center space-x-2 text-gray-300 hover:text-white">
                 <ArrowLeft className="h-4 w-4" />
                 <span>Back to Demo</span>
               </Link>
               <div className="flex items-center">
                 <ChefHat className="h-6 w-6 text-orange-600 mr-2" />
-                <h1 className="text-2xl font-bold text-gray-900">Bella Vista Bistro</h1>
+                <h1 className="text-2xl font-bold text-white">Bella Vista Bistro</h1>
               </div>
             </div>
 
