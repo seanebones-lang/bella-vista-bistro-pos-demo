@@ -51,6 +51,42 @@ export default function Home() {
         </div>
       </header>
 
+      {/* Featured Documentation Section */}
+      <section className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-b border-gray-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="text-center">
+            <div className="inline-flex items-center space-x-2 bg-blue-900/50 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
+              <span>New: Comprehensive System Documentation</span>
+            </div>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              📋 Complete System Overview & Documentation
+            </h2>
+            <p className="text-lg text-gray-200 mb-6 max-w-3xl mx-auto">
+              Detailed explanation of what this system is, who it's for, every feature, how to use the demo,
+              business benefits, and technical specifications. Perfect for prospective buyers and evaluators.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                href="/about"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span>Read Complete Documentation</span>
+              </Link>
+              <div className="flex items-center space-x-2 text-gray-300 text-sm">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>Everything you need to know about this system</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-16">
