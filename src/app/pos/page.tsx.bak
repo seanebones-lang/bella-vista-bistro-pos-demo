@@ -117,7 +117,7 @@ export default function POSTerminal() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-4">
-              <Link href="/" className="flex items-center space-x-2 text-gray-200 hover:text-white">
+              <Link href="/" className="flex items-center space-x-2 text-gray-300 hover:text-white">
                 <ArrowLeft className="h-4 w-4" />
                 <span>Back to Demo</span>
               </Link>
@@ -131,7 +131,7 @@ export default function POSTerminal() {
               <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">
                 Staff Interface
               </Badge>
-              <div className="text-sm text-gray-200">
+              <div className="text-sm text-gray-300">
                 <Users className="h-4 w-4 inline mr-1" />
                 Active Orders: 3
               </div>
@@ -154,7 +154,7 @@ export default function POSTerminal() {
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     selectedCategory === category
                       ? 'bg-blue-600 text-white'
-                      : 'bg-gray-800 text-gray-200 hover:bg-gray-700 border border-gray-600'
+                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-600'
                     }`}
                   >
                     {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -205,7 +205,7 @@ export default function POSTerminal() {
                     <div key={index} className="flex items-center justify-between p-2 bg-gray-700 rounded border border-gray-600">
                       <div className="flex-1">
                         <h4 className="font-medium text-sm text-white">{item.menuItem.name}</h4>
-                        <p className="text-xs text-gray-200">${item.menuItem.price.toFixed(2)} each</p>
+                        <p className="text-xs text-gray-300">${item.menuItem.price.toFixed(2)} each</p>
                       </div>
 
                       <div className="flex items-center space-x-2">
@@ -262,7 +262,7 @@ export default function POSTerminal() {
                     className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                       paymentMethod === 'CARD'
                         ? 'bg-blue-600 text-white'
-                        : 'bg-gray-700 text-gray-200 border border-gray-600'
+                        : 'bg-gray-700 text-gray-300 border border-gray-600'
                     }`}
                   >
                     <CreditCard className="h-4 w-4 inline mr-1" />
@@ -273,7 +273,7 @@ export default function POSTerminal() {
                     className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                       paymentMethod === 'CASH'
                         ? 'bg-blue-600 text-white'
-                        : 'bg-gray-700 text-gray-200 border border-gray-600'
+                        : 'bg-gray-700 text-gray-300 border border-gray-600'
                     }`}
                   >
                     Cash
@@ -327,7 +327,7 @@ export default function POSTerminal() {
         <div className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-4">
           <Card className="bg-gray-800 border-gray-700">
             <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium text-gray-200">Today&apos;s Orders</CardTitle>
+              <CardTitle className="text-sm font-medium text-gray-300">Today&apos;s Orders</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold text-blue-400">47</div>
@@ -337,7 +337,7 @@ export default function POSTerminal() {
 
           <Card className="bg-gray-800 border-gray-700">
             <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium text-gray-200">Revenue</CardTitle>
+              <CardTitle className="text-sm font-medium text-gray-300">Revenue</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold text-green-400">$2,847</div>
@@ -347,7 +347,7 @@ export default function POSTerminal() {
 
           <Card className="bg-gray-800 border-gray-700">
             <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium text-gray-200">Avg Order Value</CardTitle>
+              <CardTitle className="text-sm font-medium text-gray-300">Avg Order Value</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold text-purple-400">$60.57</div>
@@ -357,7 +357,7 @@ export default function POSTerminal() {
 
           <Card className="bg-gray-800 border-gray-700">
             <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium text-gray-200">Active Tables</CardTitle>
+              <CardTitle className="text-sm font-medium text-gray-300">Active Tables</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold text-orange-400">8/16</div>
