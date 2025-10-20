@@ -890,11 +890,12 @@ export default function About() {
                 </Card>
 
                 <Card className="bg-gray-700 border-gray-600">
-                  <CardTitle className="text-white flex items-center">
-                    <ShoppingBag className="h-5 w-5 text-purple-400 mr-2" />
-                    Food Retail Operations
-                  </CardTitle>
-                </CardHeader>
+                  <CardHeader>
+                    <CardTitle className="text-white flex items-center">
+                      <ShoppingBag className="h-5 w-5 text-purple-400 mr-2" />
+                      Food Retail Operations
+                    </CardTitle>
+                  </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 mb-4">
                     Delis, bakeries, and specialty food retailers requiring
