@@ -60,7 +60,7 @@ export default function Home() {
               <span>New: Comprehensive System Documentation</span>
             </div>
             <h2 className="text-3xl font-bold text-white mb-4">
-              📋 Complete System Overview & Documentation
+              Complete System Overview & Documentation
             </h2>
             <p className="text-lg text-gray-200 mb-6 max-w-3xl mx-auto">
               Detailed explanation of what this system is, who it's for, every feature, how to use the demo,
